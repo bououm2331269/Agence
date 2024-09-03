@@ -6,7 +6,7 @@ using std::string;
 
 class Faction
 {
-private:
+public:
 	int attaque;
 	int defense;
 	int vie;
@@ -16,14 +16,19 @@ private:
 
 public:
 	Faction(int _attaque, int _defense, int _vie, int _capacite);
+	Faction();
 	~Faction();
 
-	string getNom();
 	int getAtt();
+
 	int getDef();
+
 	int getVie();
+
 	int getCap();
-	
+
+	string getNom();
+
 	virtual string to_string();
 };
 

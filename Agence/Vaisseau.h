@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include <FactionRouge.h>
+#include "Faction.h"
 
 using std::string;
 
@@ -17,11 +17,12 @@ private:
 	string nom;
 	int niveau;
 	int exp;
-	FactionRouge faction;
+	Faction faction;
 
 
 public:
 	Vaisseau(int _attaque, int _defense, int _vie, int _capacite, string _nom, int _niveau, int _exp);
+	Vaisseau();
 	~Vaisseau();
 
 	int getAtt();

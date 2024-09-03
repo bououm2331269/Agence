@@ -9,6 +9,10 @@ Faction::Faction(int _attaque, int _defense, int _vie, int _capacite)
 	capacite = _capacite;
 }
 
+Faction::Faction()
+{
+}
+
 Faction:: ~Faction()
 {
 

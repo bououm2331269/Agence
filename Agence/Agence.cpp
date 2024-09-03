@@ -8,7 +8,7 @@
 
 int main()
 {
-    Vaisseau vaisseau = Vaisseau(0,1,2,3,"Test",3,9);
+    Vaisseau vaisseau = Vaisseau(0, 1, 2, 3, "Test", 3, 9);
     Transport trans = Transport();
     Faction fac = Faction();
 
