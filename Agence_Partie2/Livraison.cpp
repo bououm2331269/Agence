@@ -1,5 +1,5 @@
 #include "Livraison.h"
-Livraison::Livraison() :Vaisseau(1, 2, 3, 4, "Livraison", 2, 5)
+Livraison::Livraison(Faction* faction) :Vaisseau(faction)
 {
 
 }

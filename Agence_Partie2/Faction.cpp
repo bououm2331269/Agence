@@ -11,6 +11,10 @@ Faction::Faction(int _attaque, int _defense, int _vie, int _capacite)
 
 Faction::Faction()
 {
+	attaque = 5;
+	defense = 10;
+	vie = 12;
+	capacite = 12;
 }
 
 Faction:: ~Faction()

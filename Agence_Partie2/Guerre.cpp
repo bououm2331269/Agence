@@ -1,6 +1,6 @@
 #include "Guerre.h"
 
-Guerre::Guerre() :Vaisseau(2, 3, 4, 5, "Guerre", 3, 10)
+Guerre::Guerre(Faction* faction):Vaisseau(faction)
 {
 
 }

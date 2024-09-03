@@ -3,7 +3,7 @@
 
 using std::to_string;
 
-Vaisseau::Vaisseau(int _attaque, int _defense, int _vie, int _capacite, string _nom, int _niveau, int _exp)
+Vaisseau::Vaisseau(int _attaque, int _defense, int _vie, int _capacite, string _nom, int _niveau, int _exp, Faction* _faction)
 {
 	attaque = _attaque;
 	defense = _defense;
@@ -12,34 +12,41 @@ Vaisseau::Vaisseau(int _attaque, int _defense, int _vie, int _capacite, string _
 	nom = _nom;
 	niveau = _niveau;
 	exp = _exp;
-	faction = Faction();
+	faction = _faction;
+
 }
 
 
-Vaisseau::Vaisseau()
+Vaisseau::Vaisseau(Faction* _faction)
 {
-	faction = Faction();
-
+	faction = _faction;
+	attaque = 0;
+	defense = 1;
+	vie = 2;
+	capacite = 3;
+	nom = 4;
+	niveau = 5;
+	exp = 6;
 }
 
 Vaisseau:: ~Vaisseau()
 {
-
+	delete faction;
 }
 
 
 int Vaisseau::getAtt()
 {
-	return attaque;
+	return attaque+=faction->attaque;
 }
 
 int Vaisseau::getDef()
 {
-	return defense;
+	return defense+=faction->defense;
 }
 int Vaisseau::getVie()
 {
-	return vie;
+	return vie+=faction->vie;
 }
 int Vaisseau::getCap()
 {

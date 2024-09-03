@@ -17,12 +17,12 @@ private:
 	string nom;
 	int niveau;
 	int exp;
-	Faction faction;
+	Faction* faction;
 
 
 public:
-	Vaisseau(int _attaque, int _defense, int _vie, int _capacite, string _nom, int _niveau, int _exp);
-	Vaisseau();
+	Vaisseau(int _attaque, int _defense, int _vie, int _capacite, string _nom, int _niveau, int _exp, Faction* _faction);
+	Vaisseau(Faction* faction);
 	~Vaisseau();
 
 	int getAtt();

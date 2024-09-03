@@ -4,7 +4,7 @@
 class Transport:public Vaisseau
 {
 public:
-	Transport();
+	Transport(Faction* faction);
 	~Transport();
 
 	virtual std::string to_string();

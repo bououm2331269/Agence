@@ -1,6 +1,6 @@
 #include "Transport.h"
 
-Transport::Transport():Vaisseau(0,1,2,3,"Transport",1,3)
+Transport::Transport(Faction* faction):Vaisseau(faction)
 {
 
 }
