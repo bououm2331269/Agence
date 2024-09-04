@@ -15,7 +15,18 @@ Vaisseau::Vaisseau(int _attaque, int _defense, int _vie, int _capacite, string _
 	faction = _faction;
 
 }
-
+Vaisseau::Vaisseau(int _niveau, int _exp)
+{
+	faction = new Faction();
+	attaque = 0;
+	defense = 1;
+	vie = 2;
+	capacite = 3;
+	nom = 4;
+	niveau = _niveau;
+	exp = _exp;
+	
+}
 
 Vaisseau::Vaisseau(Faction* _faction)
 {
@@ -50,7 +61,7 @@ int Vaisseau::getVie()
 }
 int Vaisseau::getCap()
 {
-	return capacite;
+	return capacite+=faction->capacite;
 }
 int Vaisseau::getNiveau()
 {

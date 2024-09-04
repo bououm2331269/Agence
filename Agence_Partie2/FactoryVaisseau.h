@@ -6,6 +6,7 @@ class FactoryVaisseau
 {
 public:
 	static Vaisseau* getRandomVaisseau();
+	static Vaisseau* getRandomVaisseauRang();
 
 private:
 	static Faction* getRandomFaction();

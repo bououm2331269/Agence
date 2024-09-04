@@ -19,16 +19,6 @@ public:
 	Faction();
 	~Faction();
 
-	int getAtt();
-
-	int getDef();
-
-	int getVie();
-
-	int getCap();
-
-	string getNom();
-
 	virtual string to_string();
 };
 

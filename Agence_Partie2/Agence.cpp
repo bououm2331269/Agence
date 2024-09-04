@@ -2,18 +2,18 @@
 //
 
 #include <iostream>
+#include <ctime>
+#include "FactoryVaisseau.h"
 #include "Vaisseau.h"
-#include "Transport.h"
 #include "Faction.h"
 
 int main()
 {
-   // Vaisseau vaisseau = Vaisseau(0, 1, 2, 3, "Test", 3, 9);
-    Transport trans = Transport();
-    Faction fac = Faction();
-
-    //std::cout << vaisseau.to_string();
-    std::cout << trans.to_string();
+    srand(time(NULL));
+    std::cout << "Production d'un vaisseau" << std::endl;
+    Vaisseau* monVaisseau = FactoryVaisseau::getRandomVaisseau();
+    std::cout << monVaisseau->to_string();
+    //std::cout << trans.to_string();
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage

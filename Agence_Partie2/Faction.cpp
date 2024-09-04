@@ -11,43 +11,20 @@ Faction::Faction(int _attaque, int _defense, int _vie, int _capacite)
 
 Faction::Faction()
 {
-	attaque = 5;
-	defense = 10;
-	vie = 12;
-	capacite = 12;
 }
+
+
 
 Faction:: ~Faction()
 {
 
 }
 
-int Faction::getAtt()
-{
-	return attaque;
-}
-
-int Faction::getDef()
-{
-	return defense;
-}
-int Faction::getVie()
-{
-	return vie;
-}
-int Faction::getCap()
-{
-	return capacite;
-}
-string Faction::getNom()
-{
-	return nom;
-}
 
 std::string Faction::to_string()
 {
 	string info = "\n";
-	//info.append(" " + nom + "\n");
+	info.append(" " + nom + "\n");
 	return info;
 }
 
